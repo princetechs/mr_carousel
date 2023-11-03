@@ -16,7 +16,16 @@
   }
 }
 
-body {
+.pattern1 {
+  background: repeating-linear-gradient(45deg, hsl(var(--b1)), hsl(var(--b1)) 13px, hsl(var(--b2)) 13px, hsl(var(--b2)) 14px);
+}
+
+.bgpattren1 {
+  background: radial-gradient(#000ac3 0.5px, #6464ca 0.5px);
+  background-size: 10px 10px;
+}
+
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +33,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
