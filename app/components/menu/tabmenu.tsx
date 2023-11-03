@@ -1,15 +1,28 @@
 import React, { useState } from 'react'
 import PalettePicker from './colors/palettepicker';
+import useMenuStore from '../../store';
 
 function Tabmenu() {
     const [activeTab, setActiveTab] = useState('General');
+    const slides = useMenuStore((state) => state.slides);
+    const updateSlides = useMenuStore((state) => state.updateSlides);
 
+    const handleChange = (event: any) => {
+        updateSlides(event.target.value);
+    };
     const tabs = ['General', 'Colors', 'Tab 3'];
 
     const renderContent = () => {
         switch (activeTab) {
             case 'General':
-                return <div>Content for Tab 1</div>;
+                return (
+                    <>
+                        <label className="label">Slides to Use</label>
+                        <input type="range" min={3} max={20} value={slides} onChange={handleChange} className="range range-xs" />
+                        <p>{slides}</p>
+                    </>
+
+                );
             case 'Colors':
                 return (
                     <PalettePicker />

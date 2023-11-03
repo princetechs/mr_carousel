@@ -1,9 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import SliderTemplate from "../templates/sliderTemplate";
-
+import useMenuStore from "@/app/store";
 export default function Slideview(props: any) {
-    const [slidecontroll, setSlidecontroll] = useState("2")
     interface Slide {
         sldnum: number;
         type: string; // Define valid types
@@ -28,7 +27,7 @@ export default function Slideview(props: any) {
 
     const apijson: jsondata = props.newSlideContent;
 
-
+    const [bgcolour, textcolor, accentcolor] = useMenuStore((state) => state.colors)
 
     return (
         <>
@@ -39,10 +38,12 @@ export default function Slideview(props: any) {
                     apijson && apijson.LinkedIn_Carousel && apijson.LinkedIn_Carousel.Slides.map((slide: any, index: number) => (
                         <div className="carousel-item w-1/2 " id={`slide${index}`} key={index}>
                             <SliderTemplate
+                                accentcolor={accentcolor}
+                                textcolor={textcolor}
+                                bgcolour={bgcolour}
                                 title={slide.title}
                                 content={slide.content}
                                 emoji={slide.emoji}
-                                bgcolour="bg-red-400"
                             />
                         </div>
                     ))

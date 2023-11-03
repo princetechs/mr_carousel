@@ -1,16 +1,19 @@
 "use client"
 import React, { Suspense, useState } from 'react';
 import Sidebar from '../app/components/sidebar/page';
-
+import useMenuStore from './store';
 import SlideView from './components/slider/page';
 import sampleData from '@/jsondb/sampledb.json';
 
 export default function Home() {
+
   const [newSlideContent, setnewSlideContent] = useState(sampleData)
+  const slides = useMenuStore((state => state.slides))
+
   async function generateCarousel(topic: string) {
     const apiMessage = {
       topic,
-      slides: 3,
+      slides: slides,
     };
 
     try {

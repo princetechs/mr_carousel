@@ -1,21 +1,35 @@
 "use client"
 import React from 'react';
 import ColorPaletteButton from '@/app/components/menu/colors/colorpalette';
-
+import useMenuStore from '@/app/store';
 const PalettePicker: React.FC = () => {
     const palettes: string[][] = [
-        ['#FF0000', '#00FF00', '#0000FF'],
-        ['#FFFF00', '#00FFFF', '#FF00FF'],
-        ['#FFFF00', '#00FFFF', '#FF00FF'],
-        ['#FFFF00', '#00FFFF', '#FF00FF'],
-        ['#FFFF00', '#00FFFF', '#FF00FF'],
+        ['#B36BF7', '#FFFFFF', '#000000'],
+        ['#EB546F', '#FFFFFF', '#220257'],
+        ['#56a3f5', '#ffffff', '#06247f'],
+        ['#1a1d29', '#e6e6e6', '#c5c5ff'],
+        ['#ffffff', '#231b54', '#ee834e'],
+        ['#dde5e7', '#67727e', '#d4674c'],
+        ['#f6f0f0', '#0567a8', '#60e3d5'],
+        ['#F1EDDC', '#474747', '#F8AFA6'],
+        ['#F2D7EE', '#262626', '#4F4A7C'],
+        ['#D6DBB2', '#3C3C3C', '#e88411'],
+        ['#F9E2D2', '#2C2C2C', '#8491C3'],
+        ['#280647', '#b3aee9', '#96f7d2'],
+        ['#EE8271', '#FFFFFF', '#4D0A65'],
+        ['#1a223a', '#e4e4eb', '#ffaf87'],
+        ['#1e1e1e', '#f2f2f2', '#52c3c9'],
+        ['#2d2d2d', '#f5f5f5', '#ffcc66']
 
         // Add more palettes as needed
     ];
 
+
+    const colors = useMenuStore((state) => state.colors)
+    const updateColors = useMenuStore((state) => state.updateColors)
+    // Handle the color selection here
     const handlePaletteClick = (colors: string[]) => {
-        console.log(colors);
-        // Handle the color selection here
+        updateColors(colors)
     };
 
     return (

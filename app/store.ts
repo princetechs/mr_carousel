@@ -2,19 +2,19 @@ import create from 'zustand';
 
 type State = {
     slides: number;
-    bgcolour: string;
+    colors: string[];
 };
 
 type Actions = {
     updateSlides: (slides: number) => void;
-    updateBgColor: (bgcolour: string) => void;
+    updateColors: (colors: string[]) => void;
 };
 
-const usePersonStore = create<State & Actions>((set) => ({
-    slides: 4,
-    bgcolour: 'white',
+const useMenuStore = create<State & Actions>((set) => ({
+    slides: 3,
+    colors: [],
     updateSlides: (slides) => set({ slides }),
-    updateBgColor: (bgcolour) => set({ bgcolour }),
+    updateColors: (colors) => set({ colors }),
 }));
 
-export default usePersonStore;
+export default useMenuStore;
