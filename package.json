@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
+    "encoding": "^0.1.13",
     "html2pdf.js": "^0.10.1",
     "next": "13.5.6",
     "openai": "^4.12.4",
