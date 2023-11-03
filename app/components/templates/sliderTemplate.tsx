@@ -23,14 +23,14 @@ function SliderTemplate(props: SliderTemplateProps) {
 
             {
                 props.title && (
-                    <p style={{ color: props.textcolor }} className="text-xl font-bold text-white sm:text-2xl" contentEditable={true} id="title" suppressContentEditableWarning={true}>
+                    <p style={{ color: props.textcolor }} className="text-xl text-center font-bold text-white sm:text-2xl" contentEditable={true} id="title" suppressContentEditableWarning={true}>
                         {props.title}
                     </p>
                 )
             }
-            <div className='mt-8'>
+            <div className='mt-8 '>
                 {props.emoji && (
-                    <p className="text-5xl text-white" contentEditable={true} id="emoji" suppressContentEditableWarning={true}>
+                    <p className="text-5xl  text-white" contentEditable={true} id="emoji" suppressContentEditableWarning={true}>
                         {props.emoji}
                     </p>
                 )}
@@ -39,7 +39,7 @@ function SliderTemplate(props: SliderTemplateProps) {
             <div className="mt-60">
                 {props.content && (
                     <div>
-                        <p style={{ color: props.textcolor }} className="text-sm text-white" contentEditable={true} id="content" suppressContentEditableWarning={true}>
+                        <p style={{ color: props.textcolor }} className="text-sm text-center text-white" contentEditable={true} id="content" suppressContentEditableWarning={true}>
                             {props.content}
                         </p>
                     </div>
