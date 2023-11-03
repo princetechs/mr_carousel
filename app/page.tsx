@@ -14,7 +14,7 @@ export default function Home() {
     };
 
     try {
-      const response = await fetch(`${process.env.APP_URL}/api/openai`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/openai`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
