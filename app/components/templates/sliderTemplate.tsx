@@ -1,4 +1,6 @@
+"use client"
 import React from 'react';
+import Editor from '../Editor/editor';
 interface SliderTemplateProps {
     content?: string;
     title?: string;
@@ -13,19 +15,15 @@ function SliderTemplate(props: SliderTemplateProps) {
     return (
         <div style={{ backgroundColor: props.bgcolour }}
             className={`relative p-8 sm:p-12 lg:p-16   bg-accent`}>
-            {
-                props.subtitle && (
-                    <p className="text-sm font-medium uppercase tracking-widest text-pink-500" contentEditable={true} id="subtitle" suppressContentEditableWarning={true}>
-                        {props.subtitle}
-                    </p>
-                )
-            }
+
 
             {
                 props.title && (
-                    <p style={{ color: props.textcolor }} className="text-xl text-center font-bold text-white sm:text-2xl" contentEditable={true} id="title" suppressContentEditableWarning={true}>
-                        {props.title}
-                    </p>
+                    <div className="text-xl text-center font-bold text-white sm:text-2xl" style={{ color: props.textcolor }}>
+                        <Editor content={props.title} />
+                    </div>
+
+
                 )
             }
             <div className='mt-8 '>
@@ -38,10 +36,10 @@ function SliderTemplate(props: SliderTemplateProps) {
 
             <div className="mt-60">
                 {props.content && (
-                    <div>
-                        <p style={{ color: props.textcolor }} className="text-sm text-center text-white" contentEditable={true} id="content" suppressContentEditableWarning={true}>
-                            {props.content}
-                        </p>
+                    <div style={{ color: props.textcolor }} className="text-sm text-white" >
+
+                        <Editor content={props.content} />
+
                     </div>
                 )}
             </div>
