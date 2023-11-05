@@ -2,7 +2,6 @@
 import React from 'react';
 import SliderTemplate from '../templates/sliderTemplate';
 import useMenuStore from '@/app/store';
-import html2pdf from 'html2pdf.js';
 
 
 const Slideview = (props: any) => {
@@ -22,14 +21,18 @@ const Slideview = (props: any) => {
 
 
         // Create a new instance of html2pdf
-        const exporter = new html2pdf();
+
         let element = ""
         slides.forEach((slide) => {
 
             element += slide.innerHTML + `<div class='breakpoint'></div>`; // Append the inner HTML content of each slide
         });
         console.log(element)
-        exporter.from(element).set(options).save().then(() => console.log('PDF downloaded!'));
+
+        import('html2pdf.js').then((html2pdf) => {
+            html2pdf.default().from(element).set(options).save().then(() => console.log('PDF downloaded!'));
+        });
+
     };
 
     return (
