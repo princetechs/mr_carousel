@@ -1,10 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-import Sidebar from './components/sidebar/page'
-
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
   title: 'Mr.carousel',
   description: 'Make your ai carousel in a minute',
