@@ -20,17 +20,22 @@ function Tabmenu() {
                         <label className="label">Slides to Use</label>
                         <input type="range" min={3} max={20} value={slides} onChange={handleChange} className="range range-xs" />
                         <p>{slides}</p>
+                        <label className="label">Select Color Palette</label>
+
+                        <PalettePicker />
+
                     </>
 
                 );
             case 'Colors':
                 return (
-                    <PalettePicker />
+                    <>
+                    </>
                 )
-            case 'Tab 3':
-                return <div>Content for Tab 3</div>;
-            default:
-                return null;
+            // case 'Tab 3':
+            //     return <div>Content for Tab 3</div>;
+            // default:
+            //     return null;
         }
     }
 

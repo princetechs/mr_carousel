@@ -1,0 +1,48 @@
+{
+    "LinkedIn_Carousel": {
+        "topic": "How to Create a Server",
+        "totalSlide": 5,
+        "description": "Learn the essential steps to set up your own server for various purposes. 💻🛠️ #ServerSetup #TechTips",
+        "emoji": "🚀",
+        "Slides": [
+            {
+                "sldnum": 1,
+                "type": "intro",
+                "title": "Welcome to Server Setup!",
+                "content": "Let's dive into the world of servers and explore the process of setting up your own server for different applications. 🌐",
+                "emoji": "👋"
+            },
+            {
+                "sldnum": 2,
+                "type": "content",
+                "title": "Choose Your Server Type",
+                "Image": "An image of various server racks in a data center.",
+                "content": "Before you begin, decide whether you need a web server, file server, or application server. Each has its unique purpose. 🖥️",
+                "emoji": "💽"
+            },
+            {
+                "sldnum": 3,
+                "type": "content",
+                "title": "Select the Right Hardware",
+                "Image": "A snapshot of different server hardware components.",
+                "content": "Ensure you have the appropriate hardware, such as CPU, RAM, and storage, to meet your server's performance requirements. 🔧💻",
+                "emoji": "🔨"
+            },
+            {
+                "sldnum": 4,
+                "type": "content",
+                "title": "Operating System Installation",
+                "Image": "A screenshot of an operating system installation process.",
+                "content": "Install your chosen operating system on the server hardware. This will be the foundation for your server. 📦",
+                "emoji": "🖥️"
+            },
+            {
+                "sldnum": 5,
+                "type": "outer",
+                "title": "Start Your Server Journey",
+                "content": "Now that you have the basics covered, you're ready to start your server journey. Share your thoughts and questions in the comments! 🚀💬",
+                "emoji": "🔥"
+            }
+        ]
+    }
+}

@@ -7,13 +7,13 @@ import {
 import StarterKit from '@tiptap/starter-kit'
 import { Color } from '@tiptap/extension-color'
 import TextStyle from '@tiptap/extension-text-style'
-import React, { ChangeEvent, MouseEvent } from 'react'
+import React, { ChangeEvent, MouseEvent, useEffect } from 'react'
 
 interface TextEditorProps {
     content?: string;
 }
 
-export default function Editor({ content = "" }: TextEditorProps) {
+export default function Editor({ content }: TextEditorProps) {
     const editor = useEditor({
         extensions: [
             StarterKit,
@@ -22,8 +22,13 @@ export default function Editor({ content = "" }: TextEditorProps) {
                 types: ['textStyle'],
             })
         ],
-        content,
     })
+
+    useEffect(() => {
+        if (editor && content !== undefined) {
+            editor.commands.setContent(content)
+        }
+    }, [content, editor])
 
     const handleColorChange = (event: ChangeEvent<HTMLInputElement>) => {
         editor?.chain().focus().setColor(event.target.value).run();

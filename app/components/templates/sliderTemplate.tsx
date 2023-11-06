@@ -14,7 +14,7 @@ interface SliderTemplateProps {
 function SliderTemplate(props: SliderTemplateProps) {
     return (
         <div style={{ backgroundColor: props.bgcolour }}
-            className={`relative p-8 sm:p-12 lg:p-16   bg-accent`}>
+            className="relative p-4 sm:p-6 lg:p-8  bg-accent">
 
 
             {
@@ -26,10 +26,12 @@ function SliderTemplate(props: SliderTemplateProps) {
 
                 )
             }
+
             <div className='mt-8 '>
                 {props.emoji && (
                     <p className="text-5xl  text-white" contentEditable={true} id="emoji" suppressContentEditableWarning={true}>
                         {props.emoji}
+
                     </p>
                 )}
             </div>

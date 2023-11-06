@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import PalettePicker from '@/app/components/menu/colors/palettepicker';
 import Tabmenu from '../menu/tabmenu';
-export default function Sidebar({ generateclick }: any) {
+export default function Sidebar({ generateclick, loading }: any) {
 
     // const increasePopulation = useStore(state => state.increasePopulation)
 
@@ -29,9 +29,18 @@ export default function Sidebar({ generateclick }: any) {
                         value={inputData}
                         onChange={(e) => setInputData(e.target.value)}
                     />
-                    <button className="btn btn-primary mt-2" onClick={handleGenerateClick}>
-                        ✨ Generate
-                    </button>
+
+                    {loading ? (
+
+
+
+                        <button className=" bg-accent hover:bg-secondary hover:text-black btn btn-primary mt-2 cursor-not-allowed" >
+                            <span className="loading loading-dots loading-md"></span>
+                        </button>) : (
+
+                        <button className="btn btn-primary mt-2" onClick={handleGenerateClick}>
+                            ✨ Generate
+                        </button>)}
 
                     <Tabmenu />
                 </ul>
