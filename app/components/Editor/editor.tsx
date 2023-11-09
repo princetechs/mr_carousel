@@ -56,6 +56,7 @@ export default function Editor({ content }: TextEditorProps) {
                     value={editor.getAttributes('textStyle').color}
                     data-testid="setColor"
                 />
+
                 <button
                     onClick={handleBoldClick}
                     className={`p-1 ${editor.isActive('bold') ? 'bg-blue-500 text-white' : ''}`}

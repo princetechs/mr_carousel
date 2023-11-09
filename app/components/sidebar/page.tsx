@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import PalettePicker from '@/app/components/menu/colors/palettepicker';
 import Tabmenu from '../menu/tabmenu';
-export default function Sidebar({ generateclick, loading }: any) {
+export default function Sidebar({ generateclick, loading, credits }: any) {
 
     // const increasePopulation = useStore(state => state.increasePopulation)
 
@@ -24,7 +24,7 @@ export default function Sidebar({ generateclick, loading }: any) {
                     {/* Sidebar content here */}
                     <input
                         type="text"
-                        placeholder="Type here"
+                        placeholder={`You have ${credits} credits`}
                         className="input input-bordered w-full max-w-xs"
                         value={inputData}
                         onChange={(e) => setInputData(e.target.value)}
