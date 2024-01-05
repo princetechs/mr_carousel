@@ -74,15 +74,15 @@ const Home: React.FC = () => {
   };
 
   const generateCarousel = useCallback(async (topic: string) => {
-    if (userCredits <= 0) {
-      setTokenValid(true);
+    // if (userCredits <= 0) {
+    //   setTokenValid(true);
 
-      setTimeout(() => {
-        setTokenValid(false);
-      }, 2000);
+    //   setTimeout(() => {
+    //     setTokenValid(false);
+    //   }, 2000);
 
-      return;
-    }
+    //   return;
+    // }
 
     setIsLoading(true);
 
