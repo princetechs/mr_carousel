@@ -23,7 +23,15 @@ function Tabmenu() {
                         <label className="label">Select Color Palette</label>
 
                         <PalettePicker />
-
+                        <br />
+                        <a
+                            href="https://github.com/princetechs/mr_carousel"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-2  bg-gray-200 rounded-full p-2 hover:bg-gray-300 transition duration-300"
+                        >
+                            <span className="text-gray-800 items-center">Github</span>
+                        </a>
                     </>
 
                 );

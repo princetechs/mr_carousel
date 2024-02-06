@@ -1,8 +1,5 @@
-
 "use client"
-
 import React from 'react';
-
 interface ColorPaletteButtonProps {
     colors: string[];
     onClick: () => void;
